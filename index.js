@@ -1,20 +1,8 @@
+import 'sequelize'
 //REQUIRE
-let express = require("express")
-let bodyParser = require("body-parser")
-let mysql = require("mysql")
-//SERVER
-let connection = mysql.createConnection({
-    host : "localhost",
-    user : "root",
-    password : "",
-    database : "pollution-reporter"
-})
-connection.connect()
-connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
-    if (error) throw error;
-    console.log('The solution is: ', results[0].solution);
-  });
-  connection.end();
+const  express = require("express")
+const bodyParser = require("body-parser")
+const mysql = require("mysql")
 
 let app = express()
 let urlencodedParser = bodyParser.urlencoded({ extended: false })
