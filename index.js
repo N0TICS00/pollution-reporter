@@ -1,8 +1,7 @@
-import 'sequelize'
 //REQUIRE
 const  express = require("express")
 const bodyParser = require("body-parser")
-const mysql = require("mysql")
+
 
 let app = express()
 let urlencodedParser = bodyParser.urlencoded({ extended: false })
@@ -14,8 +13,7 @@ app.get("/",(req,res) => {
     
 })
 app.post("/", urlencodedParser, (req,res)=>{
-    let city = req.body
-    res.render("index", city)
+    
 })
 
 
