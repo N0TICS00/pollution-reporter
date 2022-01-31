@@ -1,8 +1,8 @@
-import User from '../models/reportModel'
+const City = require("../models/cityModel")
 
 
 let createNewPost = (cityName) => {
-    let User = new User({cityName:cityName})
-    User.save()
+   
+    return City.create({cityName: cityName})
 }
 module.exports = createNewPost

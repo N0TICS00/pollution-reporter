@@ -1,6 +1,6 @@
-const { DataTypes } = require("sequelize/dist")
+const { DataTypes } = require("sequelize")
 const sequelize = require("../server")
-const User = sequelize.define('City', {
+const City = sequelize.define('city', {
     id:{
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -12,4 +12,4 @@ const User = sequelize.define('City', {
         allowNull: false
     }
 })
-module.exports = User
+module.exports = City
