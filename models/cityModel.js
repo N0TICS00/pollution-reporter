@@ -10,6 +10,10 @@ const City = sequelize.define('city', {
     cityName: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    post: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: true
     }
 })
 module.exports = City
